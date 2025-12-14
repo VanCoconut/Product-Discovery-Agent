@@ -497,9 +497,9 @@ cd gcp_simulation
 pip install -r requirements.txt
 
 # Test manually
-..\.venv\Scripts\python.exe -m functions-framework --target=search_products_function --source=main.py --port=8080
+..\.venv\Scripts\python.exe -m functions_framework --target=search_products_function --source=main.py --port=8080
 # or 
-.venv\Scripts\python.exe -m functions-framework --target=search_products_function --source=main.py --port=8080
+.venv\Scripts\python.exe -m functions_framework --target=search_products_function --source=main.py --port=8080
 
 #Open new terminal (wait before the previous step completes the start up)
 curl.exe -X POST http://localhost:8080 -H "Content-Type: application/json" -d '{\"query\": \"scarpe da corsa\", \"top_k\": 3}'
