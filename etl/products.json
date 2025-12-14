@@ -1,0 +1,182 @@
+[
+  {
+    "product_id": 101,
+    "name": "StormRunner X5",
+    "category": "Footwear",
+    "description": "A durable trail running shoe designed for wet conditions. Features GORE-TEX lining and high-traction soles.",
+    "price": 89.99,
+    "in_stock": true,
+    "brand": "ActiveGear"
+  },
+  {
+    "product_id": 102,
+    "name": "EcoTrek Hiker",
+    "category": "Footwear",
+    "description": "Eco-friendly hiking boots made from recycled materials. Waterproof and breathable for long mountain treks.",
+    "price": 120.50,
+    "in_stock": true,
+    "brand": "GreenPath"
+  },
+  {
+    "product_id": 103,
+    "name": "UrbanWalker Sneakers",
+    "category": "Footwear",
+    "description": "Casual white sneakers perfect for city life. Memory foam insole for all-day comfort.",
+    "price": 45.00,
+    "in_stock": true,
+    "brand": "UrbanStyle"
+  },
+  {
+    "product_id": 104,
+    "name": "SpeedDemon Racer",
+    "category": "Footwear",
+    "description": "Lightweight marathon running shoes used by professionals. Aerodynamic design.",
+    "price": 150.00,
+    "in_stock": false,
+    "brand": "ActiveGear"
+  },
+  {
+    "product_id": 201,
+    "name": "RainGuard Shell Jacket",
+    "category": "Clothing",
+    "description": "A lightweight, packable rain jacket. 100% waterproof windbreaker suitable for hiking and cycling.",
+    "price": 75.99,
+    "in_stock": true,
+    "brand": "MountainPeak"
+  },
+  {
+    "product_id": 202,
+    "name": "ArcticParka Extreme",
+    "category": "Clothing",
+    "description": "Heavy-duty winter coat insulated with down feathers. Rated for temperatures down to -30°C.",
+    "price": 299.99,
+    "in_stock": true,
+    "brand": "NordicWear"
+  },
+  {
+    "product_id": 203,
+    "name": "YogaFlow Leggings",
+    "category": "Clothing",
+    "description": "High-waist stretchy leggings suitable for yoga and pilates. Moisture-wicking fabric.",
+    "price": 35.00,
+    "in_stock": true,
+    "brand": "ZenFit"
+  },
+  {
+    "product_id": 204,
+    "name": "TechFleece Hoodie",
+    "category": "Clothing",
+    "description": "Warm athletic hoodie with zippered pockets. Great for outdoor workouts in chilly weather.",
+    "price": 55.00,
+    "in_stock": true,
+    "brand": "ActiveGear"
+  },
+  {
+    "product_id": 301,
+    "name": "SonicBoom 300",
+    "category": "Electronics",
+    "description": "Wireless noise-canceling over-ear headphones. 30-hour battery life and deep bass.",
+    "price": 199.99,
+    "in_stock": true,
+    "brand": "AudioTech"
+  },
+  {
+    "product_id": 302,
+    "name": "FitTrack Pro",
+    "category": "Electronics",
+    "description": "Advanced fitness tracker watch. Monitors heart rate, sleep, and GPS steps. Waterproof.",
+    "price": 129.99,
+    "in_stock": true,
+    "brand": "TechLife"
+  },
+  {
+    "product_id": 303,
+    "name": "PowerBank Ultra",
+    "category": "Electronics",
+    "description": "20000mAh portable charger. Fast charging for smartphones and tablets. Compact design.",
+    "price": 40.00,
+    "in_stock": true,
+    "brand": "GadgetGo"
+  },
+  {
+    "product_id": 304,
+    "name": "ActionCam 4K",
+    "category": "Electronics",
+    "description": "Rugged waterproof action camera. Records 4K video at 60fps. Includes mounting kit.",
+    "price": 250.00,
+    "in_stock": false,
+    "brand": "VisionX"
+  },
+  {
+    "product_id": 401,
+    "name": "CityCommuter Backpack",
+    "category": "Accessories",
+    "description": "Sleek laptop backpack with anti-theft zippers and USB charging port. Water-resistant.",
+    "price": 65.00,
+    "in_stock": true,
+    "brand": "UrbanStyle"
+  },
+  {
+    "product_id": 402,
+    "name": "HydraFlask 1L",
+    "category": "Accessories",
+    "description": "Insulated stainless steel water bottle. Keeps drinks cold for 24 hours or hot for 12.",
+    "price": 25.00,
+    "in_stock": true,
+    "brand": "EcoLife"
+  },
+  {
+    "product_id": 403,
+    "name": "TrailBlazer Tent",
+    "category": "Outdoor",
+    "description": "2-person lightweight camping tent. Easy setup and highly wind resistant.",
+    "price": 180.00,
+    "in_stock": true,
+    "brand": "MountainPeak"
+  },
+  {
+    "product_id": 404,
+    "name": "NightVision Headlamp",
+    "category": "Outdoor",
+    "description": "Bright LED headlamp with adjustable strap. Multiple modes including red light for night vision.",
+    "price": 29.99,
+    "in_stock": true,
+    "brand": "BrightPath"
+  },
+  {
+    "product_id": 105,
+    "name": "Classic Leather Loafers",
+    "category": "Footwear",
+    "description": "Elegant leather shoes suitable for office and formal events. Handcrafted finish.",
+    "price": 110.00,
+    "in_stock": true,
+    "brand": "GentlemanChoice"
+  },
+  {
+    "product_id": 205,
+    "name": "SummerBreeze Dress",
+    "category": "Clothing",
+    "description": "Floral print cotton dress. Light and airy, perfect for hot summer days.",
+    "price": 45.00,
+    "in_stock": true,
+    "brand": "UrbanStyle"
+  },
+  {
+    "product_id": 305,
+    "name": "SmartHome Hub",
+    "category": "Electronics",
+    "description": "Voice-controlled smart speaker. Controls lights, music, and thermostats.",
+    "price": 89.00,
+    "in_stock": true,
+    "brand": "TechLife"
+  },
+  {
+    "product_id": 405,
+    "name": "Yoga Mat Pro",
+    "category": "Accessories",
+    "description": "Non-slip yoga mat with alignment lines. Extra thick for joint protection.",
+    "price": 40.00,
+    "in_stock": true,
+    "brand": "ZenFit"
+  }
+]
