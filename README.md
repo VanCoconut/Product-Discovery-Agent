@@ -113,13 +113,6 @@ Traditional keyword-based search fails when customers use natural language like 
 - **Docker Desktop** ([Download](https://www.docker.com/products/docker-desktop/))
 - **Git** (for cloning the repository)
 
-### Python Dependencies
-
-```bash
-# Install all project dependencies
-pip install -r requirements.txt
-```
-
 The project includes two requirements files:
 - **`requirements.txt`** - Full project dependencies (ADK, FastAPI, Milvus, etc.)
 - **`gcp_simulation/requirements.txt`** - Minimal dependencies for Cloud Functions only
@@ -135,22 +128,27 @@ The project includes two requirements files:
 
 ```bash
 # 1. Clone repository
-git clone <your-repo-url>
-cd repo-folder
+set up .env file with api key
 
 # 2. Install dependencies
+#project root
 pip install -r requirements.txt
 
 # 3. Start Milvus database
+#project root
 docker-compose up -d
 
 # 4. Ingest sample data
+cd etl
 python ingest.py
 
-# 5. Start MCP server
+# 5. (New terminal) Start MCP server
+#project root
+cd p_discovery_agent
 python mcp_server_http.py
 
 # 6. (New terminal) Start ADK web interface
+#project root
 adk web
 
 # 7. Open browser at http://127.0.0.1:8000
@@ -378,11 +376,6 @@ python mcp_server_http.py
 INFO:     Uvicorn running on http://0.0.0.0:8002
 ```
 
-**Test Server:**
-```bash
-curl http://localhost:8002/
-```
-
 ### Step 6: Start ADK Web Interface
 
 ```bash
@@ -400,18 +393,6 @@ adk web
 - Navigate to `http://127.0.0.1:8000`
 - Select your project folder
 - Start chatting with the agent!
-
----
-
-## 🧪 Testing the Agent
-
-
-### Direct API Testing
-
-```bash
-# Test MCP endpoint directly
-curl -X POST http://localhost:8002/mcp -H "Content-Type: application/json" -d "{\"jsonrpc\":\"2.0\",\"id\":\"test-1\",\"method\":\"tools/call\",\"params\":{\"name\":\"search_products\",\"arguments\":{\"query\":\"waterproof shoes\",\"max_price\":100}}}"
-```
 
 ---
 
@@ -445,7 +426,7 @@ The `gcp_simulation/` folder demonstrates serverless deployment readiness using 
 ### Quick Test
 
 ```bash
-#if you have already installed all the dependencies int the requirements.txt file in the the parent folder
+#if you have already installed all the dependencies in the requirements.txt file in the the parent folder
 #directly pass to bash simulation_test.sh
 #if you just want to use only the gcp simulation then follow the steps below
 cd gcp_simulation
@@ -456,9 +437,6 @@ pip install -r .\requirements.txt
 #Common commands for both the previos steps
 # On Windows (Git Bash)
 bash simulation_test.sh
-
-# On Windows (PowerShell - manual)
-functions-framework --target=search_products_function --source=main.py --port=8080
 ```
 
 **Expected Output:**
@@ -491,9 +469,6 @@ functions-framework --target=search_products_function --source=main.py --port=80
 # 1. Verify MCP server is running
 curl http://localhost:8002/
 
-# 2. Test MCP endpoint
-curl -X POST http://localhost:8002/mcp -H "Content-Type: application/json" -d "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"tools/list\",\"params\":{}}"
-
 # 3. Check agent.py has correct URL
 # MCP_SERVER_URL = "http://localhost:8002/mcp"
 ```
@@ -507,11 +482,11 @@ docker ps
 # Restart Milvus
 docker-compose down
 docker-compose up -d
-# Re-run data ingestion
+# If Milvus is running then try to re-run data ingestion
 python ingest.py
 ```
 
-### GCP Simulation Fails
+### GCP Simulation Script Fails
 
 ```bash
 # Check error logs
@@ -522,7 +497,12 @@ cd gcp_simulation
 pip install -r requirements.txt
 
 # Test manually
-functions-framework --target=search_products_function --source=main.py --port=8080
+..\.venv\Scripts\python.exe -m functions-framework --target=search_products_function --source=main.py --port=8080
+# or 
+.venv\Scripts\python.exe -m functions-framework --target=search_products_function --source=main.py --port=8080
+
+#Open new terminal (wait before the previous step completes the start up)
+curl.exe -X POST http://localhost:8080 -H "Content-Type: application/json" -d '{\"query\": \"scarpe da corsa\", \"top_k\": 3}'
 ```
 
 ### API Key Issues
