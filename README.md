@@ -391,7 +391,7 @@ adk web
 
 **Open Browser:**
 - Navigate to `http://127.0.0.1:8000`
-- Select your project folder
+- On the top left corner select agent project folder (p_discovery agent)
 - Start chatting with the agent!
 
 ---
